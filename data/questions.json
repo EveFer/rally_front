@@ -48,7 +48,7 @@
         "value": 1300
     },
     "13": {
-        "question": "Teniendo la siguiente estructura y los siguientes selectores ¿Qué elementos son seleccionados? <br/> <a href='next.html' target='_blank' class='text-center link'>See</a>",
+        "question": "<a href='next.html' target='_blank' class='text-center link'>Click Me</a>",
         "value": 1000
     }
 }

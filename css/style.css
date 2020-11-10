@@ -3,8 +3,7 @@ body {
 }
 
 .link {
-    color: #ccc;
-    font-size: 24px;
+    color: #2FFF2B;
     text-decoration: none;
 }
 
@@ -14,6 +13,10 @@ body {
 
 .font-size {
     font-size: 20px;
+}
+
+.text-aqua {
+    color: white;
 }
 
 .welcome {
@@ -58,7 +61,7 @@ body {
 .wrapper-questions {
     padding: 0.8rem 0;;
 }
-
+.wrapper-options .card-question,
 .wrapper-questions .card-question {
     border: 2px solid aqua;
     border-radius: 5px;
@@ -105,20 +108,98 @@ body {
     font-size: 1.5rem;
 }
 
-@keyframes borderAnimation {
-    0% {
 
+
+.square {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.9);
+    position: relative;
+}
+
+/* comun */
+
+.square:before,
+.square:after {
+    content: "";
+    display: block;
+    background-color: yellow;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: all 0.5s;
+}
+
+/* horizontal */
+.square:before {
+    height: 3px;
+    width: 0%;
+    box-shadow: -100px calc(3px - 100%)  #2FFF2B;
+    animation: borderHorizontal 2s infinite linear;
+    /* animation: borderHInverse 2s infinite linear; */
+}
+
+/* .square:hover:before {
+    right: 0;
+    width: 85%;
+} */
+
+/* vertical */
+.square:after {
+    width: 3px;
+    height: 0%;
+    box-shadow: calc(100% - 3px) -100px  #2FFF2B;
+    animation: borderVertical 2s infinite linear;
+}
+
+/* .square:hover:after {
+    height: 85%;
+} */
+
+@keyframes borderHorizontal {
+    0% {
+        width: 0%;
+        box-shadow: 0 calc(3px - 100px) yellow;
     }
     25% {
-
+        width: 25%;
+        box-shadow: 0 calc(3px - 100px) yellow;
     }
     50% {
-
+        width: 50%;
+        box-shadow: 0 calc(3px - 100px) yellow;
     }
     75% {
-
+        width: 75%;
+        box-shadow: 0 calc(3px - 100px) yellow;
     }
     100% {
+        width: 100%;
+        box-shadow: 0 calc(3px - 100px) yellow;
+    }
+}
 
+@keyframes borderVertical {
+    0% {
+        height: 0%;
+        box-shadow: calc(100% - 3px) 0 yellow;
+    }
+    25% {
+        height: 25%;
+        box-shadow: calc(100% - 3px) 0 yellow;
+    }
+    50% {
+        height: 50%;
+        box-shadow: calc(100% - 3px) 0 yellow;
+    }
+    75% {
+        height: 75%;
+        box-shadow: calc(100% - 3px) 0 yellow;
+    }
+    100% {
+        height: 100%;
+        box-shadow: calc(100% - 3px) 0 yellow;
     }
 }
