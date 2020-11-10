@@ -1,50 +1,54 @@
 {
     "1": {
-        "question": "1. Los elementos HTML se comportan de una forma prederteminada. ¿Cuáles son estos tipos de elementos y como se comportan?",
-        "value": 200
+        "question": "Los elementos HTML se comportan de una forma prederteminada. ¿Cuáles son estos tipos de elementos y como se comportan?",
+        "value": 100
     },
     "2": {
-        "question": "2. Menciona 5 tags HTML y su utilidad",
+        "question": "Menciona 5 tags HTML y su utilidad",
         "value": 200
     },
     "3": {
-        "question": "3. Menciona 3 tags HTML 'Block' y 3 de 'Inline'",
-        "value": 200
+        "question": "Menciona 3 tags HTML <span class='font-weight-bold font-size'>'Block'</span> y 3 de <span class='font-weight-bold font-size'>Inline'</span>",
+        "value": 300
     },
     "4": {
-        "question": "4. ¿Qué elementos componente la sintaxis de una regla CSS?",
-        "value": 200
+        "question": "¿Qué elementos componente la sintaxis de una regla CSS?",
+        "value": 400
     },
     "5": {
-        "question": "5. ¿Cuáles son los selectores básicos de CSS y cuál es su especicifidad?",
-        "value": 200
+        "question": "¿Cuáles son los selectores básicos de CSS y cuál es su especicifidad?",
+        "value": 500
     },
     "6": {
-        "question": "6. ¿Cuáles son las 3 principales características de CSS?",
-        "value": 200
+        "question": "¿Cuáles son las 3 principales características de CSS?",
+        "value": 600
     },
     "7": {
-        "question": "7. ¿Cuáles son los elementos que componen el Layout de Bootstrap? y ¿cuál es su jerarquía",
-        "value": 200
+        "question": "¿Cuáles son los elementos que componen el Layout de Bootstrap? y ¿cuál es su jerarquía",
+        "value": 700
     },
     "8": {
-        "question": "8. Menciona 5 clases de utilidad de Bootstrap y ¿Para qué sirven?",
-        "value": 200
+        "question": "Menciona 5 clases de utilidad de Bootstrap y ¿Para qué sirven?",
+        "value": 800
     },
     "9": {
-        "question": "9. Menciona los sufijos y sus respectivos rangos que Boostrap toma en cuenta para la Responsividad",
-        "value": 200
+        "question": "Menciona los <span class='font-weight-bold font-size'>sufijos</span> y sus respectivos rangos que Boostrap toma en cuenta para la Responsividad",
+        "value": 900
     },
     "10": {
-        "question": "10. Menciona los valores validos para la propiedad 'position' y describe su comportamiento",
-        "value": 200
+        "question": "Menciona los valores validos para la propiedad <span class='font-weight-bold font-size'>'position'</span> y describe su comportamiento",
+        "value": 1000
     },
     "11": {
-        "question": "11. Reto: Generar la estructura básica de un proyecto usando la TERMINAL e implementar Bootstrap (3 min) *Punto Extra",
-        "value": 500
+        "question": "Reto: Generar la estructura básica de un proyecto usando la <span class='font-weight-bold font-size'>TERMINAL</span> e implementar Bootstrap (3 min) *Puntos Extra",
+        "value": 1200
     },
     "12": {
-        "question": "12. Al generar un contedor Flexible y tomando en cuenta que una de sus propiedades tiene el siguiente valor: 'flex-direction: column', ¿Cuál es el eje Principal y el eje Secundario de este Contenedor? *Punto Extra",
-        "value": 500
+        "question": "Al generar un contedor <span class='font-weight-bold font-size'>Flexible</span> y tomando en cuenta que una de sus propiedades tiene el siguiente valor: <span class='font-weight-bold font-size'>'flex-direction: column'</span>, ¿Cuál es el eje Principal y el eje Secundario de este Contenedor? *Puntos Extra",
+        "value": 1300
+    },
+    "13": {
+        "question": "Teniendo la siguiente estructura y los siguientes selectores ¿Qué elementos son seleccionados? <br/> <a href='next.html' target='_blank' class='text-center link'>See</a>",
+        "value": 1000
     }
 }

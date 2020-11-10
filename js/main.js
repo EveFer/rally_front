@@ -52,6 +52,32 @@ function addEventButtonNextTeam() {
     })
 }
 
+function addEventButtonError() {
+    $('#btn-error').on('click', function() {
+        console.log($(this).data('pointsError'))
+        teams[currentTeam].points += $(this).data('pointsError')
+        $("#btn-next-team").trigger("click")
+        $("#btn-next-question").trigger("click")
+    }) 
+}
+
+function addEventButtonCorrect() {
+    $('#btn-correct').click(function() {
+        console.log($(this).data('pointsCorrect'))
+        teams[currentTeam].points += $(this).data('pointsCorrect')
+        $("#btn-next-team").trigger("click")
+        $("#btn-next-question").trigger("click")
+    }) 
+}
+function addEventButtonHalf() {
+    $('#btn-half').click(function() {
+        console.log($(this).data('pointsHalf'))
+        teams[currentTeam].points += parseInt($(this).data('pointsHalf'))
+        $("#btn-next-team").trigger("click")
+        $("#btn-next-question").trigger("click")
+    }) 
+}
+
 function printTeams() {
     $('#wrapper-teams').html('')
     teams.forEach((item, index) => {
@@ -77,7 +103,6 @@ function printTeams() {
                 `)
             }
         }else if(item.current === true) {
-            console.log('current')
             $('#wrapper-teams').append(`
                 <div class="team current">
                     <div class="team-members"><i class="fas fa-star"></i> ${item.members[0]} <i class="fas fa-star"></i> ${item.members[1]}  <i class="fas fa-star"></i> ${item.members[2]}</div>
@@ -105,29 +130,41 @@ $.getJSON(questions,  (json) => {
     for (const question in json) {
         if(json.hasOwnProperty(question)) {
             if(question === '1') {
-                console.log(json[question])
+                // console.log(json[question])
+                const value = json[question]['value']
+                console.log(value)
                 $('#wrapper-questions').hide()
+                $('#wrapper-questions').fadeOut(1000)
                 $('#wrapper-questions').append(`
                     <div class="card-question">
-                        <p>${json[question]['question']}</p>
+                        <ol start="${currentQuestion}">
+                            <li>
+                                ${json[question]['question']}
+                            </li>
+                        </ol>
                     </div>
                     <div class="my-5">
-                        <button data-points="0" class="btn-circle error" id="btn-error"><i class="fas fa-times"></i></button>
-                        <button data-points="${json[question]['value']}" class="btn-circle correct" id="btn-correct"><i class="fas fa-check"></i></button>
-                        <button data-points="${(json[question]['value'])/2}" class="btn-circle half" id="btn-half"><i class="fas fa-star-half-alt"></i></button>
+                        <button class="btn-circle error" id="btn-error" data-points-error='0'><i class="fas fa-times"></i></button>
+                        <button class="btn-circle correct" id="btn-correct" data-points-correct='${value}'><i class="fas fa-check"></i></button>
+                        <button class="btn-circle half" id="btn-half" data-points-half='${(value)/2}'><i class="fas fa-star-half-alt"></i></button>
                     </div>
                     <div class="">
                         <button class="btn-next-question" id="btn-next-team"><i class="far fa-hand-point-right"></i> Next Team</button>
                         <button class="btn-next-question" id="btn-next-question"><i class="fas fa-arrow-right"></i> Next question</button>
                     </div>
                 `)
-                addEventButtonNextTeam()
+                // addEventButtonNextTeam()
                 currentQuestion += 1;
-                addEventButtonNextQuestion()
-                addEventButtons()
+                // addEventButtonNextQuestion()
+                // addEventButtons()
             }
         }
     }
+    addEventButtonNextTeam()
+    addEventButtonNextQuestion()
+    addEventButtonError()
+    addEventButtonCorrect()
+    addEventButtonHalf()
 })
 
 function addEventButtonNextQuestion() {
@@ -138,27 +175,34 @@ function addEventButtonNextQuestion() {
             for (const question in json) {
                 if(json.hasOwnProperty(question)) {
                     if(question === currentQuestion.toString()) {
+                        const value = json[question]['value']
+                        console.log(value)
                         $('#wrapper-questions').hide()
+                        $('#wrapper-questions').fadeOut(1000)
                         $('#wrapper-questions').append(`
                             <div class="card-question">
-                                <p>${json[question]['question']}</p>
+                                <ol start="${currentQuestion}">
+                                    <li>
+                                    ${json[question]['question']}
+                                    </li>
+                                </ol>
                             </div>
                             <div class="my-5">
-                                <button data-points="0" class="btn-circle error" id="btn-error"><i class="fas fa-times"></i></button>
-                                <button data-points="${json[question]['value']}" class="btn-circle correct" id="btn-correct"><i class="fas fa-check"></i></button>
-                                <button data-points="${(json[question]['value'])/2}" class="btn-circle half" id="btn-half"><i class="fas fa-star-half-alt"></i></button>
+                                <button class="btn-circle error" id="btn-error" data-points-error='0'><i class="fas fa-times"></i></button>
+                                <button class="btn-circle correct" id="btn-correct" data-points-correct='${value}'><i class="fas fa-check"></i></button>
+                                <button class="btn-circle half" id="btn-half" data-points-half='${(value)/2}'><i class="fas fa-star-half-alt"></i></button>
                             </div>
                             <div class="">
                                 <button class="btn-next-question" id="btn-next-team"><i class="far fa-hand-point-right"></i> Next Team</button>
                                 <button class="btn-next-question" id="btn-next-question"><i class="fas fa-arrow-right"></i> Next question</button>
                             </div>
                         `)
-                        addEventButtonNextTeam()
+                        // addEventButtonNextTeam()
                         currentQuestion ++;
-                        addEventButtonNextQuestion()
-                        addEventButtons()
+                        // addEventButtonNextQuestion()
+                        // addEventButtons()
                         break;
-                    }else if(currentQuestion === 13) {
+                    }else if(currentQuestion === 14) {
                         console.log('Ultima pregunta')
                         $('#wrapper-questions').html('')
                         $('#wrapper-questions').append(`
@@ -170,28 +214,17 @@ function addEventButtonNextQuestion() {
                     }
                 }
             }
+            addEventButtonNextTeam()
+            addEventButtonNextQuestion()
+            addEventButtonError()
+            addEventButtonCorrect()
+            addEventButtonHalf()
         })
+        
     })
 }
 
-function addEventButtons () {
-    $('#btn-error').click((event) => {
-        teams[currentTeam].points += 0;
-        printTeams()
-    }) 
-    $('#btn-correct').click((event) => {
-        const points = parseInt(event.target.dataset.points)
-        console.log(points)
-        teams[currentTeam].points += points;
-        printTeams()
-    }) 
-    $('#btn-half').click((event) => {
-        const points = parseInt(event.target.dataset.points)
-        console.log(points)
-        teams[currentTeam].points += points;
-        printTeams()
-    }) 
-}
+
 
 
 
