@@ -141,16 +141,17 @@ $.getJSON(questions,  (json) => {
                             <li>
                                 ${json[question]['question']}
                             </li>
-                        </ol>
+                        </ol><br/>
+                        <P class="text-center">Points: <span class="text-points">${json[question]['value']}</span></P>
                     </div>
                     <div class="my-5">
-                        <button class="btn-circle error" id="btn-error" data-points-error='0'><i class="fas fa-times"></i></button>
+                        <button class="btn-circle error" id="btn-error" data-points-error='25'><i class="fas fa-times"></i></button>
                         <button class="btn-circle correct" id="btn-correct" data-points-correct='${value}'><i class="fas fa-check"></i></button>
                         <button class="btn-circle half" id="btn-half" data-points-half='${(value)/2}'><i class="fas fa-star-half-alt"></i></button>
                     </div>
-                    <div class="">
-                        <button class="btn-next-question" id="btn-next-team"><i class="far fa-hand-point-right"></i> Next Team</button>
-                        <button class="btn-next-question" id="btn-next-question"><i class="fas fa-arrow-right"></i> Next question</button>
+                    <div class="d-flex">
+                        <button class="btn-next-question mr-1" id="btn-next-team"><i class="far fa-hand-point-right"></i> Next Team</button>
+                        <button class="btn-next-question ml-1" id="btn-next-question"><i class="fas fa-arrow-right"></i> Next question</button>
                     </div>
                 `)
                 // addEventButtonNextTeam()
@@ -185,16 +186,17 @@ function addEventButtonNextQuestion() {
                                     <li>
                                     ${json[question]['question']}
                                     </li>
-                                </ol>
+                                </ol> <br/>
+                                <P class="text-center">Points: <span class="text-points">${json[question]['value']}</span></P>
                             </div>
                             <div class="my-5">
-                                <button class="btn-circle error" id="btn-error" data-points-error='0'><i class="fas fa-times"></i></button>
+                                <button class="btn-circle error" id="btn-error" data-points-error='25'><i class="fas fa-times"></i></button>
                                 <button class="btn-circle correct" id="btn-correct" data-points-correct='${value}'><i class="fas fa-check"></i></button>
                                 <button class="btn-circle half" id="btn-half" data-points-half='${(value)/2}'><i class="fas fa-star-half-alt"></i></button>
                             </div>
-                            <div class="">
-                                <button class="btn-next-question" id="btn-next-team"><i class="far fa-hand-point-right"></i> Next Team</button>
-                                <button class="btn-next-question" id="btn-next-question"><i class="fas fa-arrow-right"></i> Next question</button>
+                            <div class="d-flex">
+                                <button class="btn-next-question mr-1" id="btn-next-team"><i class="far fa-hand-point-right"></i> Next Team</button>
+                                <button class="btn-next-question ml-1" id="btn-next-question"><i class="fas fa-arrow-right"></i> Next question</button>
                             </div>
                         `)
                         // addEventButtonNextTeam()
@@ -203,11 +205,13 @@ function addEventButtonNextQuestion() {
                         // addEventButtons()
                         break;
                     }else if(currentQuestion === 14) {
+                        const pointsTotal = teams.reduce((accum, team) => accum += team.points, 0)
                         console.log('Ultima pregunta')
                         $('#wrapper-questions').html('')
                         $('#wrapper-questions').append(`
                             <div class="card-question text-center">
-                                <p>Final de las Preguntas</p>
+                                <p> FIN </p>
+                                <p class="points-tota">Mucho éxito Amigos!!!</>
                                 <p>=n_n=</p>
                             </div>
                         `)

@@ -5,50 +5,70 @@
     },
     "2": {
         "question": "Menciona 5 tags HTML y su utilidad",
-        "value": 200
+        "value": 100
     },
     "3": {
         "question": "Menciona 3 tags HTML <span class='font-weight-bold font-size'>'Block'</span> y 3 de <span class='font-weight-bold font-size'>Inline'</span>",
-        "value": 300
+        "value": 100
     },
     "4": {
-        "question": "¿Qué elementos componente la sintaxis de una regla CSS?",
-        "value": 400
+        "question": "¿Qué elementos componen la sintaxis de una regla CSS?",
+        "value": 200
     },
     "5": {
         "question": "¿Cuáles son los selectores básicos de CSS y cuál es su especicifidad?",
-        "value": 500
+        "value": 200
     },
     "6": {
         "question": "¿Cuáles son las 3 principales características de CSS?",
-        "value": 600
+        "value": 300
     },
     "7": {
-        "question": "¿Cuáles son los elementos que componen el Layout de Bootstrap? y ¿cuál es su jerarquía",
-        "value": 700
+        "question": "Menciona los parametros que recibe la propiedad <span class='font-weight-bold font-size'>'box-shadow'</span>. Además menciona 5 propiedades más de CSS y para que funcionan.",
+        "value": 300
     },
     "8": {
-        "question": "Menciona 5 clases de utilidad de Bootstrap y ¿Para qué sirven?",
-        "value": 800
+        "question": "¿Cuáles son los elementos que componen el Layout de Bootstrap? y ¿cuál es su jerarquía",
+        "value": 500
     },
     "9": {
-        "question": "Menciona los <span class='font-weight-bold font-size'>sufijos</span> y sus respectivos rangos que Boostrap toma en cuenta para la Responsividad",
-        "value": 900
+        "question": "Menciona 10 clases de utilidad de Bootstrap y ¿Para qué sirven?",
+        "value": 300
     },
     "10": {
-        "question": "Menciona los valores validos para la propiedad <span class='font-weight-bold font-size'>'position'</span> y describe su comportamiento",
-        "value": 1000
+        "question": "Menciona los <span class='font-weight-bold font-size'>sufijos</span> y sus respectivos rangos que Boostrap toma en cuenta para la Responsividad",
+        "value": 500
     },
     "11": {
-        "question": "Reto: Generar la estructura básica de un proyecto usando la <span class='font-weight-bold font-size'>TERMINAL</span> e implementar Bootstrap (3 min) *Puntos Extra",
-        "value": 1200
+        "question": "Menciona los valores validos para la propiedad <span class='font-weight-bold font-size'>'position'</span> y describe su comportamiento",
+        "value": 600
     },
     "12": {
-        "question": "Al generar un contedor <span class='font-weight-bold font-size'>Flexible</span> y tomando en cuenta que una de sus propiedades tiene el siguiente valor: <span class='font-weight-bold font-size'>'flex-direction: column'</span>, ¿Cuál es el eje Principal y el eje Secundario de este Contenedor? *Puntos Extra",
-        "value": 1300
+        "question": "Reto: Generar la estructura básica de un proyecto usando la <span class='font-weight-bold font-size'>TERMINAL</span> e implementar Bootstrap (3 min) *Puntos Extra",
+        "value": 700
     },
     "13": {
+        "question": "Al generar un contedor <span class='font-weight-bold font-size'>Flexible</span> y tomando en cuenta que una de sus propiedades tiene el siguiente valor: <span class='font-weight-bold font-size'>'flex-direction: column'</span>, ¿Cuál es el eje Principal y el eje Secundario de este Contenedor? *Puntos Extra",
+        "value": 800
+    },
+    "14": {
+        "question": "Menciona los comandos del flujo Básico de GIT (Agregar un cambio en la historia); y describe su función",
+        "value": 900
+    },
+    "15": {
+        "question": "¿Cuál es la diferencia entre una <span class='font-weight-bold font-size'>Librería</span> y un <span class='font-weight-bold font-size'>Framework</span>",
+        "value": 800
+    },
+    "16": {
+        "question": "¿Cuales son los pasos del Pensamiento Estructurado?",
+        "value": 1000
+    },
+    "17": {
         "question": "<a href='next.html' target='_blank' class='text-center link'>Click Me</a>",
         "value": 1000
+    },
+    "18": {
+        "question": "¿Cuál es el nombre completo de su Mentora del módulo de Maquetado?",
+        "value": 2000
     }
 }
