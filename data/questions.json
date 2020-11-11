@@ -8,7 +8,7 @@
         "value": 100
     },
     "3": {
-        "question": "Menciona 3 tags HTML <span class='font-weight-bold font-size'>'Block'</span> y 3 de <span class='font-weight-bold font-size'>Inline'</span>",
+        "question": "Menciona 3 tags de tipo <span class='font-weight-bold font-size'>'Block'</span> y 3 de tipo <span class='font-weight-bold font-size'>Inline'</span>",
         "value": 100
     },
     "4": {
@@ -24,23 +24,23 @@
         "value": 300
     },
     "7": {
-        "question": "Menciona los parametros que recibe la propiedad <span class='font-weight-bold font-size'>'box-shadow'</span>. Además menciona 5 propiedades más de CSS y para que funcionan.",
+        "question": "Menciona los parametros que recibe la propiedad <span class='font-weight-bold font-size'>'box-shadow'</span>. Además menciona 5 propiedades más de CSS y su función.",
         "value": 300
     },
     "8": {
-        "question": "¿Cuáles son los elementos que componen el Layout de Bootstrap? y ¿cuál es su jerarquía",
+        "question": "¿Cuáles son los elementos que componen el Layout de Bootstrap? y ¿cuál es su jerarquía?",
         "value": 500
     },
     "9": {
-        "question": "Menciona 10 clases de utilidad de Bootstrap y ¿Para qué sirven?",
+        "question": "Menciona 10 clases de utilidad de Bootstrap y su función",
         "value": 300
     },
     "10": {
-        "question": "Menciona los <span class='font-weight-bold font-size'>sufijos</span> y sus respectivos rangos que Boostrap toma en cuenta para la Responsividad",
+        "question": "Menciona los <span class='font-weight-bold font-size'>sufijos</span> que Boostrap toma en cuenta para la Responsividad y sus respectivos rangos",
         "value": 500
     },
     "11": {
-        "question": "Menciona los valores validos para la propiedad <span class='font-weight-bold font-size'>'position'</span> y describe su comportamiento",
+        "question": "Menciona los valores válidos para la propiedad <span class='font-weight-bold font-size'>'position'</span> y describe su comportamiento",
         "value": 600
     },
     "12": {
@@ -52,15 +52,15 @@
         "value": 800
     },
     "14": {
-        "question": "Menciona los comandos del flujo Básico de GIT (Agregar un cambio en la historia); y describe su función",
+        "question": "Menciona los comandos del flujo básico de GIT (Agregar un cambio en la historia); y describe su función",
         "value": 900
     },
     "15": {
-        "question": "¿Cuál es la diferencia entre una <span class='font-weight-bold font-size'>Librería</span> y un <span class='font-weight-bold font-size'>Framework</span>",
+        "question": "¿Cuál es la diferencia entre una <span class='font-weight-bold font-size'>Librería</span> y un <span class='font-weight-bold font-size'>Framework</span>?",
         "value": 800
     },
     "16": {
-        "question": "¿Cuales son los pasos del Pensamiento Estructurado?",
+        "question": "¿Cuál es el flujo que sigue el pensamiento estructurado para resolver un problema?",
         "value": 1000
     },
     "17": {

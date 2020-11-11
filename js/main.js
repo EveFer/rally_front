@@ -4,7 +4,7 @@ let currentTeam = 0;
 let currentQuestion = 1
 const teams = [
     {
-        members: ['Cristobal', 'JP', 'Arnold', 'Toño'],
+        members: ['Cristobal', 'JP', 'Toño', 'Arnold' ],
         points:0,
         current: true
     },
@@ -204,7 +204,7 @@ function addEventButtonNextQuestion() {
                         // addEventButtonNextQuestion()
                         // addEventButtons()
                         break;
-                    }else if(currentQuestion === 14) {
+                    }else if(currentQuestion === 19) {
                         const pointsTotal = teams.reduce((accum, team) => accum += team.points, 0)
                         console.log('Ultima pregunta')
                         $('#wrapper-questions').html('')
