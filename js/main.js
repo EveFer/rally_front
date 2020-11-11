@@ -211,7 +211,8 @@ function addEventButtonNextQuestion() {
                         $('#wrapper-questions').append(`
                             <div class="card-question text-center">
                                 <p> FIN </p>
-                                <p class="points-tota">Mucho éxito Amigos!!!</>
+                                <p class="points-tota">Mucho éxito Amigos!!!</p>
+                                <p class="points-tota">Siempre usen la TERMINAL para crear sus directorios y archivos</p>
                                 <p>=n_n=</p>
                             </div>
                         `)
