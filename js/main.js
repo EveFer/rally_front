@@ -4,32 +4,32 @@ let currentTeam = 0;
 let currentQuestion = 1
 const teams = [
     {
-        members: ['Cristobal', 'JP', 'Toño', 'Arnold' ],
+        members: ['Zay', 'Manu', 'Bellie', 'Emma' ],
         points:0,
         current: true
     },
     {
-        members: ['Itzi', 'L. Dani', 'Emilio'],
+        members: ['Alex', 'Brian', 'Silvi', 'Charlie'],
         points:0,
         current: false
     },
     {
-        members: ['Cin', 'Arce', 'JC'],
+        members: ['Juan de Dios', 'Mike', 'Azu'],
         points:0,
         current: false
     },
     {
-        members: ['Emma', 'Chris', 'Abraham'],
+        members: ['Elvira', 'Naye', 'Oscar'],
         points:0,
         current: false
     },
     {
-        members: ['Elda', 'Pete', 'Shari'],
+        members: ['Ale', 'Mario', 'Lily'],
         points:0,
         current: false
     },
     {
-        members: ['Airy', 'Eric', 'Rod'],
+        members: ['Charly', 'Andre', 'Gil'],
         points:0,
         current: false
     }
@@ -82,13 +82,19 @@ function printTeams() {
     $('#wrapper-teams').html('')
     teams.forEach((item, index) => {
         
-        if(index === 0 ) {
+        if(index === 0 || index === 1) {
             if(item.current) {
                 $('#wrapper-teams').append(`
                     <div class="team current">
-                        <div class="team-members"><i class="fas fa-star"></i> ${item.members[0]} <i class="fas fa-star"></i> ${item.members[1]}  <i class="fas fa-star"></i> ${item.members[2]}  <i class="fas fa-star"></i> ${item.members[3]}</div>
+                        <span class="border"></span>
+                        <span class="border"></span>
+                        <span class="border"></span>
+                        <span class="border"></span>
                         <div>
-                            Points Total: <span class="points">${item.points}</span>
+                            <div class="team-members"><i class="fas fa-star"></i> ${item.members[0]} <i class="fas fa-star"></i> ${item.members[1]}  <i class="fas fa-star"></i> ${item.members[2]}  <i class="fas fa-star"></i> ${item.members[3]}</div>
+                            <div>
+                                Points Total: <span class="points">${item.points}</span>
+                            </div>
                         </div>
                     </div>
                 `)
@@ -104,10 +110,16 @@ function printTeams() {
             }
         }else if(item.current === true) {
             $('#wrapper-teams').append(`
-                <div class="team current">
-                    <div class="team-members"><i class="fas fa-star"></i> ${item.members[0]} <i class="fas fa-star"></i> ${item.members[1]}  <i class="fas fa-star"></i> ${item.members[2]}</div>
+                    <div class="team current">
+                    <span class="border"></span>
+                    <span class="border"></span>
+                    <span class="border"></span>
+                    <span class="border"></span>
                     <div>
-                        Points Total: <span class="points">${item.points}</span>
+                        <div class="team-members"><i class="fas fa-star"></i> ${item.members[0]} <i class="fas fa-star"></i> ${item.members[1]}  <i class="fas fa-star"></i> ${item.members[2]}</div>
+                        <div>
+                            Points Total: <span class="points">${item.points}</span>
+                        </div>
                     </div>
                 </div>
             `)
@@ -145,7 +157,7 @@ $.getJSON(questions,  (json) => {
                         <P class="text-center">Points: <span class="text-points">${json[question]['value']}</span></P>
                     </div>
                     <div class="my-5">
-                        <button class="btn-circle error" id="btn-error" data-points-error='25'><i class="fas fa-times"></i></button>
+                        <button class="btn-circle error" id="btn-error" data-points-error='50'><i class="fas fa-times"></i></button>
                         <button class="btn-circle correct" id="btn-correct" data-points-correct='${value}'><i class="fas fa-check"></i></button>
                         <button class="btn-circle half" id="btn-half" data-points-half='${(value)/2}'><i class="fas fa-star-half-alt"></i></button>
                     </div>
@@ -190,7 +202,7 @@ function addEventButtonNextQuestion() {
                                 <P class="text-center">Points: <span class="text-points">${json[question]['value']}</span></P>
                             </div>
                             <div class="my-5">
-                                <button class="btn-circle error" id="btn-error" data-points-error='25'><i class="fas fa-times"></i></button>
+                                <button class="btn-circle error" id="btn-error" data-points-error='50'><i class="fas fa-times"></i></button>
                                 <button class="btn-circle correct" id="btn-correct" data-points-correct='${value}'><i class="fas fa-check"></i></button>
                                 <button class="btn-circle half" id="btn-half" data-points-half='${(value)/2}'><i class="fas fa-star-half-alt"></i></button>
                             </div>
@@ -212,7 +224,7 @@ function addEventButtonNextQuestion() {
                             <div class="card-question text-center">
                                 <p> FIN </p>
                                 <p class="points-tota">Mucho éxito Amigos!!!</p>
-                                <p class="points-tota">Siempre usen la TERMINAL para crear sus directorios y archivos</p>
+                                <p class="points-tota">Siempre usen la TERMINAL</p>
                                 <p>=n_n=</p>
                             </div>
                         `)

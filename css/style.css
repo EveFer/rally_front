@@ -49,7 +49,9 @@ body {
 }
 
 .wrapper-teams .team.current {
-    border: 2px dashed #2FFF2B;
+    /* border: 2px dashed #2FFF2B; */
+    position: relative;
+    border-bottom: none;
 }
 
 .wrapper-teams .team .points {
@@ -216,5 +218,60 @@ body {
 @media only screen and (min-width: 768px) {
     .welcome img {
         width: 8%;
+    }
+}
+
+/* animation */
+
+/* .box {
+    position: relative;
+} */
+
+.team.current span.border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display:block;
+}
+
+.team.current span.border:nth-of-type(1) {
+    transform: rotate(0deg)
+}
+/* .team.current span.border:nth-of-type(2) {
+    transform: rotate(90deg)
+} */
+.team.current span.border:nth-of-type(3) {
+    transform: rotate(180deg)
+}
+/* .team.current span.border:nth-of-type(4) {
+    transform: rotate(270deg)
+} */
+.team.current span.border:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #2FFF2B;
+    animation: animation 8s linear infinite;
+}
+
+@keyframes animation {
+    0% {
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+    50% {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    50.1% {
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    100% {
+        transform: scaleX(0);
+        transform-origin: right;
     }
 }
