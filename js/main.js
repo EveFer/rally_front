@@ -4,32 +4,27 @@ let currentTeam = 0;
 let currentQuestion = 1
 const teams = [
     {
-        members: ['Zay', 'Manu', 'Bellie', 'Emma' ],
+        members: ['Adolfo', 'Víctor', 'Pablo', 'Armando' ],
         points:0,
         current: true
     },
     {
-        members: ['Alex', 'Brian', 'Silvi', 'Charlie'],
+        members: ['Toño', 'Clau', 'Omar', 'Pao'],
         points:0,
         current: false
     },
     {
-        members: ['Juan de Dios', 'Mike', 'Azu'],
+        members: ['Fanny', 'Chío', 'Kraken', 'Oscar'],
         points:0,
         current: false
     },
     {
-        members: ['Elvira', 'Naye', 'Oscar'],
+        members: ['Emi', 'Pete', 'Cesar', 'Nan'],
         points:0,
         current: false
     },
     {
-        members: ['Ale', 'Mario', 'Lily'],
-        points:0,
-        current: false
-    },
-    {
-        members: ['Charly', 'Andre', 'Gil'],
+        members: ['Hiram', 'Elías', 'Mike', 'Paco'],
         points:0,
         current: false
     }
@@ -216,7 +211,7 @@ function addEventButtonNextQuestion() {
                         // addEventButtonNextQuestion()
                         // addEventButtons()
                         break;
-                    }else if(currentQuestion === 19) {
+                    }else if(currentQuestion > 10) {
                         const pointsTotal = teams.reduce((accum, team) => accum += team.points, 0)
                         console.log('Ultima pregunta')
                         $('#wrapper-questions').html('')
@@ -224,7 +219,6 @@ function addEventButtonNextQuestion() {
                             <div class="card-question text-center">
                                 <p> FIN </p>
                                 <p class="points-tota">Mucho éxito Amigos!!!</p>
-                                <p class="points-tota">Siempre usen la TERMINAL</p>
                                 <p>=n_n=</p>
                             </div>
                         `)
