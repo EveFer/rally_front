@@ -1,42 +1,30 @@
 {
     "1": {
-        "question": "¿Cuál es la diferencia al declarar una variable con <span class='font-weight-bold font-size'>'var'</span> <span class='font-weight-bold font-size'>'let'</span> y <span class='font-weight-bold font-size'>'const'</span>?",
-        "value": 200
+        "question": "¿Qué es nodejs?",
+        "value": 600
     },
     "2": {
-        "question": "¿Cuáles son todos los tipos de datos primitivos y compuestos?",
-        "value": 200
+        "question": "¿Qué es una Promesa? ¿Cuál es su constructor y su parámetro?",
+        "value": 600
     },
     "3": {
-        "question": "Menciona 5 métodos de string y cuál es su funcionalidad",
-        "value": 200
+        "question": "¿Cuáles son las partes que conforman a un paquete HTTP?",
+        "value": 600
     },
     "4": {
-        "question": "Menciona 3 datos falsy y 3 truthy",
-        "value": 200
+        "question": "Crea un script que permita implementar el módulo de File System y crea un archivo utilizando promesas",
+        "value": 600
     },
     "5": {
-        "question": "¿Cuál es la diferencia entre el operador <span class='font-weight-bold font-size'>'=='</span> y <span class='font-weight-bold font-size'>'==='</span>",
-        "value": 200
+        "question": "Crear un proyecto de node, instalar los paquetes necesarios para desarrollar una API y crear los scripts necesarios para iniciar la aplicacion con npm en modo de desarrollo y de producción",
+        "value": 600
     },
     "6": {
-        "question": "Menciona 5 métodos de array y su funcionalidad",
-        "value": 200
+        "question": "Crear un script que permita levantar un servidor con express",
+        "value": 600
     },
     "7": {
-        "question": "Crear un programa que permita agregar en una lista nombres de koders",
-        "value": 500
-    },
-    "8": {
-        "question": "<a href='next.html' target='_blank' class='text-center link'>Click Me</a>",
-        "value": 500
-    },
-    "9": {
-        "question": "Kodea la definición de una petición AJAX mediante las implementaciones: Con el Objeto <span class='font-weight-bold font-size'>XMLHttpRequest</span>  y con <span class='font-weight-bold font-size'>JQuery</span>",
-        "value": 500
-    },
-    "10": {
-        "question": "Menciona 5 métodos de DOM y cuál es su funcionalidad",
-        "value": 500
+        "question": "Explica el flujo para la autenticación y autorización de un usuario.",
+        "value": 600
     }
 }
